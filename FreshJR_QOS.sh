@@ -2054,7 +2054,7 @@ case "$arg1" in
 
 			if [ "${CV}" -ge "382" ] ; then
 				if ! [ "${webpath}" -ef "/www/QoS_Stats.asp" ] ; then
-					mount -o bind "$SCRIPT_DIR/FreshJR_QoS_Stats.asp" "/www/QoS_Stats.asp"
+					mount -o bind "/jffs/scripts/FreshJR_QoS_Stats.asp" "/www/QoS_Stats.asp"
 				fi
 			#elif [ "${CV}" = "384" ] && [ ${MV} -ge "9" ] ; then
 			fi
