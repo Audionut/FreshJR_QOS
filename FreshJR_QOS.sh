@@ -1867,7 +1867,7 @@ update(){
 	echo -e "Installing: FreshJR_QOS_v${remotever}"
 	echo ""
 	echo "Curl Output:"
-	curl "https://raw.githubusercontent.com/Audionut/FreshJR_QOS/master/FreshJR_QOS.sh" -o /jffs/scripts/FreshJR_QOS --create-dirs && curl "https://raw.githubusercontent.com/Audionut/FreshJR_QOS/master/FreshJR_QoS_Stats.asp" -o /jffs/scripts/ && sh /jffs/scripts/FreshJR_QOS -install
+	curl "https://raw.githubusercontent.com/Audionut/FreshJR_QOS/master/FreshJR_QOS.sh" -o /jffs/scripts/FreshJR_QOS --create-dirs && curl "https://raw.githubusercontent.com/Audionut/FreshJR_QOS/master/FreshJR_QoS_Stats.asp" -o "/jffs/scripts/" && sh /jffs/scripts/FreshJR_QOS -install
 	exit
 }
 
