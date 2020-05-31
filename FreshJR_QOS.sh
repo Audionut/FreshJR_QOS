@@ -299,7 +299,7 @@ release=05/28/2020
 ####################  DO NOT MODIFY BELOW  #####################
 ####################  DO NOT MODIFY BELOW  #####################
 
-webpath='/jffs/scripts/www_FreshJR_QoS_Stats.asp'		#path of FreshJR_QoS_Stats.asp
+webpath='/jffs/scripts/FreshJR_QoS_Stats.asp'		#path of FreshJR_QoS_Stats.asp
 
 #marks for iptable rules
 	Net_mark_down="0x80090001"
@@ -2054,7 +2054,7 @@ case "$arg1" in
 
 			if [ "${CV}" -ge "382" ] ; then
 				if ! [ "${webpath}" -ef "/www/QoS_Stats.asp" ] ; then
-					mount -o bind "/jffs/scripts/FreshJR_QoS_Stats.asp" "/www/QoS_Stats.asp"
+					mount -o bind "${webpath}" "/www/QoS_Stats.asp"
 				fi
 			#elif [ "${CV}" = "384" ] && [ ${MV} -ge "9" ] ; then
 			fi
@@ -2236,7 +2236,7 @@ case "$arg1" in
 
 		if [ "${CV}" -ge "382" ] ; then
 			if ! [ "${webpath}" -ef "/www/QoS_Stats.asp" ] ; then
-				mount -o bind "/jffs/scripts/FreshJR_QoS_Stats.asp" "/www/QoS_Stats.asp"
+				mount -o bind "${webpath}" "/www/QoS_Stats.asp"
 			fi
 		#elif [ "${CV}" = "384" ] && [ ${MV} -ge "9" ] ; then
 		fi
